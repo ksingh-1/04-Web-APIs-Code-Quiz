@@ -1,10 +1,83 @@
-hmtl <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fir-no">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+    <title>Code-Quiz-Game</title>
+
 </head>
+
+<style>
+    .display-4 {
+        font-weight: bold;
+    }
+    .jumbotron {
+        text-align: center;
+        background-color: transparent;
+    }
+    .btn {
+        margin: 10px 0px 30px 0px;
+    }
+
+    form {
+        text-align: center;
+    }
+
+</style>
+
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-brand" id="high-scores">View Highscores</a>
+            <button type="button" id="highscore-button" class="btn btn-info">Click Here!</button>
+            <div id="timer">Time: 50</div>
+        </nav>
+    </header>
+    <div class="jumbotron">
+        <h1 class="display-4" id="title">Coding Quiz</h1>
+        <div id="main">
+            <p class="lead">
+                Answer the following questions in the alotted time!<br> Incorrect answers will reduce the time by 10 seconds.
+            </p>
+            <div class="btn btn-primary btn-lg" role="button" id="start-button">Start Quiz Now</a>
+            <div id="answers-button">
+                <div class="btn btn-primary btn-lg" role="button" style="display: none" id="answer-1"></a><br>
+                <div class="btn btn-primary btn-lg" role="button" style="display: none" id="answer-2"></a><br>
+                <div class="btn btn-primary btn-lg" role="button" style="display: none" id="answer-3"></a><br>
+                <div class="btn btn-primary btn-lg" role="button" style="display: none" id="answer-4"></a><br>
+            </div>
+            <div style="display: none" id="result"></div>
+        </div>
+    </div>
+    <div id="user-list"></div>
+    <div class="btn btn-primary btn-lg" role="button" style="display: none" id="back"></a>
+    <div class="btn btn-primary btn-lg" role="button" style="display: none" id="back"></a>
+
+    <form class="form-inline" style="display: none" id="input-form">
+        <div class="form-group mb-2">
+            <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Enter Your Initials:">
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <input type="text" class="form-control" id="intial">
+        </div>
+        <button type="submit" class="btn btn-primary mb-2" id="submit">submit</button>
+    </form>
+
+
+    <script src="script.js"></script>
     
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
 </body>
+
 </html>
