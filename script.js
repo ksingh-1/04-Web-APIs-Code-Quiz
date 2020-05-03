@@ -12,14 +12,14 @@ $(document).ready(function() {
         scores=100;
         $("#main").show();
         $("#back", "#clear").hide();
-    }
+    };
+};
+
+function frontPage (){
+    pageTitleE1.textContent="Code Quiz Challenge!"
+    introButtonE1.textContent="Start Quiz Now"
 }
 
-$("#start-button").one("click", function() {
-    $("p, #start-button").hide();
-    $("#answers-button").show();
-    gameStart();
-    startTimer();
 });
 
 function gameStart() {
@@ -31,11 +31,54 @@ function gameStart() {
     }else {
         counter++;
         showQuestions();
-    }
-}
+    };
+};
+
+var remainTime=30;
+var startCountdown="";
+function timer() {
+    startCountdown=
+        setInterval(function (){
+            countTimer()
+        }, 1000);
     
+    function countTimer() {
+        document.getElementById("timer").innerHTML=remainTime+ "Time Left"
+        reimainTime--;
+        if (remainTime===0{
+            clearInterval(startCountdown);
+            endGame();
+        };
+    };      
+    
+    introButtonE1.addEventListener("click", timer);
+    introButtonE1.addEventListener("click", startGame);
+    function startGame(){
+        function showQuestion(){
+            var currentQuestion=questions[currentQuestionIndex];
+            if (currentQuestionIndex==questions.length){
+                endgame();
+                return;
+            }
+            buttonsBoxE1.innerHTML="";
+            questionsE1.textContent=currentQuestion.question;
 
-
+        function questionClick(){
+            if(this.value===questions[currentQuestionIndex].correct){
+                optionNode.textContent="Correct";
+                currentQuestionIndex++;
+            }else{
+                if (remainTime>5){
+                    remainTime-=5;
+                }else{
+                    remainTime=1;
+                }
+                    optionNode.textContent="Wrong";
+                    currentQuestionIndex++;
+                };
+            };
+        };
+    showQuestion(); 
 
 // Questions
 
