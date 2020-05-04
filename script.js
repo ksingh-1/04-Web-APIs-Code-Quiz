@@ -43,11 +43,11 @@ function timer() {
         }, 1000);
     
     function countTimer() {
-        document.getElementById("timer").innerHTML=remainTime+ "Time Left"
-        reimainTime--;
-        if (remainTime===0{
-            clearInterval(startCountdown);
-            endGame();
+        document.getElementById("timer").innerHTML=remainTime+ "Time Left";
+        remainTime--;
+            if (remainTime===0{
+                clearInterval(startCountdown);
+                endGame();
         };
     };      
     
@@ -80,9 +80,23 @@ function timer() {
         };
     showQuestion(); 
 
+var pageTitleE1=document.getElementById("title");
+var boxE1=document.getElementById("box");
+var timerE1=document.getElementById("timer");
+var buttonsBoxE1=document.getElementById("buttonsBox");
+var formBoxE1=document.getElementById("formBox");
+var scoresBoxE1=document.getElementById("scoresBox");
+var introE1=document.querySelector(".intro");
+var introButtonE1=document.querySelector(".introButton");
+var questionButtonE1=document.querySelector(".questionButton");
+var questionsE1=document.querySelector(".questions");
+var scoreE1=document.querySelector(".score");
+
+
+
 // Questions
 
-var questions = [
+var questions=[
     {
         question: "What are if/else statements encapsulated by?",
         answers: ["Brackets", "Quotation Marks", "Curly Brackets", "Parentheses"],
@@ -94,7 +108,7 @@ var questions = [
         correct: "Array"
     },
     {
-        question: "the .md in the README.md stands for?",
+        question: "The .md in the README.md stands for?",
         answers: ["Made Directory", "Mark Down", "Mc Donalds", "Managed Dropdown"],
         correct: "Mark Down"
     },
